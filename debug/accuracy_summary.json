@@ -1,0 +1,12 @@
+{
+    "overall_accuracy": 0.65,
+    "total_samples": 20,
+    "correct_samples": 13,
+    "misclassified_samples": 7,
+    "per_class_accuracy": {
+        "glioma_tumor": 0.0,
+        "meningioma_tumor": 1.0,
+        "no_tumor": 1.0,
+        "pituitary_tumor": 0.6
+    }
+}

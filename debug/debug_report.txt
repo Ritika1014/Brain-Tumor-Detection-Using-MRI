@@ -1,0 +1,49 @@
+================================================================================
+  BRAIN TUMOR DETECTION SYSTEM — AUTOMATED DEBUG REPORT
+================================================================================
+
+1. SUMMARY OF EVALUATION:
+   - Total Sampled Images       : 20
+   - Overall Accuracy           : 65.00%
+   - Correct Samples             : 13
+   - Misclassified Samples       : 7
+   - Average Confidence Score    : 83.55%
+
+2. PER-CLASS ACCURACY BREAKDOWN:
+   - glioma_tumor         : 0.00%
+   - meningioma_tumor     : 100.00%
+   - no_tumor             : 100.00%
+   - pituitary_tumor      : 60.00%
+
+3. DETECTED SYSTEM DIAGNOSTICS & ROOT CAUSES:
+   [PASS] Class Mapping Check: PASSED (Folders and model class_names match perfectly).
+   [PASS] Preprocessing Check: PASSED (Image tensor shape (1, 224, 224, 3), range [0, 1]).
+   [PASS] Model Architecture Check: PASSED (Input (None, 224, 224, 3), Output (None, 4)).
+   [WARNING] LOW CONFIDENCE PREDICTIONS DETECTED:
+   3/20 samples fell below required threshold (75%).
+   Average confidence across samples: 83.55%.
+   Root Cause: Model under-training or imbalance penalty causes softmax scores < 75%.
+
+4. DETAILED SAMPLE RESULTS:
+Filename             Actual Class       Predicted Class    Conf     Status      
+--------------------------------------------------------------------------------
+image(62).jpg        glioma_tumor       meningioma_tumor   79.28%   MISCLASSIFIED
+image(51).jpg        glioma_tumor       no_tumor           95.35%   MISCLASSIFIED
+image(14).jpg        glioma_tumor       meningioma_tumor   90.46%   MISCLASSIFIED
+image(97).jpg        glioma_tumor       no_tumor           83.03%   MISCLASSIFIED
+image(83).jpg        glioma_tumor       no_tumor           67.17%   MISCLASSIFIED
+image(2).jpg         meningioma_tumor   meningioma_tumor   92.49%   CORRECT     
+image(83).jpg        meningioma_tumor   meningioma_tumor   82.51%   CORRECT     
+image(73).jpg        meningioma_tumor   meningioma_tumor   93.69%   CORRECT     
+image(76).jpg        meningioma_tumor   meningioma_tumor   93.29%   CORRECT     
+image(27).jpg        meningioma_tumor   meningioma_tumor   59.56%   CORRECT     
+image(71).jpg        no_tumor           no_tumor           98.90%   CORRECT     
+image(13).jpg        no_tumor           no_tumor           94.43%   CORRECT     
+image(97).jpg        no_tumor           no_tumor           81.27%   CORRECT     
+image(94).jpg        no_tumor           no_tumor           41.04%   CORRECT     
+image(55).jpg        no_tumor           no_tumor           91.98%   CORRECT     
+image(37).jpg        pituitary_tumor    no_tumor           83.05%   MISCLASSIFIED
+image(47).jpg        pituitary_tumor    pituitary_tumor    81.27%   CORRECT     
+image(49).jpg        pituitary_tumor    pituitary_tumor    81.27%   CORRECT     
+image(5).jpg         pituitary_tumor    pituitary_tumor    94.70%   CORRECT     
+image(46).jpg        pituitary_tumor    no_tumor           86.21%   MISCLASSIFIED
