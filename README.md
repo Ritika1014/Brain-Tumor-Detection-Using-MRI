@@ -4,12 +4,13 @@
 <img src="https://img.shields.io/badge/TensorFlow-2.15-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white"/>
 <img src="https://img.shields.io/badge/Streamlit-1.35-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white"/>
 <img src="https://img.shields.io/badge/Status-Research%20Ready-brightgreen?style=for-the-badge"/>
-<img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge"/>
 
 # 🧠 Brain-Tumor-Detection-Using-MRI
 ### An Explainable AI Framework for Brain Tumor Detection
 
 **Deep Learning MRI Classification | Explainable AI | Grad-CAM XAI**
+
+This project focuses on detecting brain tumors from MRI scans using deep learning and explainable AI. It classifies MRI images into glioma, meningioma, pituitary tumor, and no tumor categories, while also generating Grad-CAM heatmaps to highlight the regions that influence each prediction. The system is designed to support medical image analysis workflows and research in computer-aided diagnosis.
 
 </div>
 
@@ -28,7 +29,6 @@
 - [Streamlit App](#-streamlit-app)
 - [Future Work](#-future-work)
 - [Citation](#-citation)
-- [License](#-license)
 
 ---
 
@@ -327,12 +327,6 @@ If you use this code for research, please cite:
   url    = {https://github.com/Ritika1014/Brain-Tumor-Detection-Using-MRI}
 }
 ```
-
----
-
-## 📜 License
-
-This project is licensed under the **MIT License**. See [LICENSE](LICENSE) for details.
 
 ---
 
